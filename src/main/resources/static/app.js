@@ -3,11 +3,11 @@ var app = (function () {
 
         axios({
             method: 'GET',
-            url: '/weather/' + ciudad
+            url: '/weather/' + ciudad,
 
         })
             .then(response => generarClima(response.data))
-            .catch(error => console.log(error))
+            .catch(error => console.log(error));
     }
 
     var generarClima = (function (clima) {
