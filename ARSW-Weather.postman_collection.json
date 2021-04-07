@@ -11,7 +11,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://api.openweathermap.org/data/2.5/weather?q=London&appid=f4d50a547866b0ad5622bd2b8d2f7145",
+					"raw": "http://api.openweathermap.org/data/2.5/weather?q=London&appid=8ffd0606f44c447c1b92e7a22c2c1ea2",
 					"protocol": "http",
 					"host": [
 						"api",
@@ -30,7 +30,7 @@
 						},
 						{
 							"key": "appid",
-							"value": "f4d50a547866b0ad5622bd2b8d2f7145"
+							"value": "8ffd0606f44c447c1b92e7a22c2c1ea2"
 						}
 					]
 				}
