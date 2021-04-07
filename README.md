@@ -1,6 +1,11 @@
 # Escuela Colombiana de Ingeniería Julio Garavito - Arquitecturas de Software ARSW - Parcial Segundo Tercio
 
-## 
+## Entrega
+
+El estilo usado de arquitectura fue cliente/servidor con un cliente consultando la api creada, y en la api creada se tiene un cliente consultando la api sugerida.
+
+* GitHub ~ <https://github.com/Daniel1Varon/Varon-ARSW-T2>
+* Heroku ~ <https://varon-arsw-t2.herokuapp.com/>
 
 ## Preparación para el Parcial
 
@@ -42,15 +47,6 @@ La arquitectura debe tener las siguientes características.
 AJUSTE LOS DIAGRAMAS DE ARQUITECTURA QUE SEAN NECESARIOS PARA REFLEJAR LAS DESICIONES DE ARQUITECTURA QUE TOMO SOBRE EL DESARROLLO DEL PARCIAL.
 
 ![](images/WeatherDiagrams.svg)
-
-## Entrega
-
-1. La aplicación funcionando en Heroku con el nombre (APELLIDO-ARSW-T2) y el código fuente almacenado en un proyecto GitHub con el nombre (APELLIDO-ARSW-T2).
-2. Los fuentes deben estar documentados y bien estructurados para generar el Javadoc.
-3. El Readme.md debe describir el diseño, la forma de ejecutar el progrema localmente, explicar cómo se puede extender y cómo podría, por ejemplo, hacer que una función específica la implementara un proveedor de servicios diferente.
-4. Indique la urls de Github, Heroku
-5. Suba el zip del proyecto al aula con el nombre (APELLIDO-ARSW-T2).
-6. Guarde una copia de su proyecto.
 
 ## Criterios de evaluación:
 

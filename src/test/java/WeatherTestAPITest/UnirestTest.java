@@ -16,22 +16,39 @@ import java.util.List;
 
 public class UnirestTest {
 
-	@Test
-	public void shouldFetchAllCitiesWeatherData() throws UnirestException {
-		List<String> cities = new ArrayList<>();
-		cities.add("London");
-		cities.add("Berlin");
+    @Test
+    public void shouldFetchAllCitiesWeatherData() throws UnirestException {
+        List<String> cities = new ArrayList<>();
+        cities.add("London");
+        cities.add("Berlin");
 
-		for (String city : cities) {
-			String url = String.format("http://api.openweathermap.org/data/2.5/weather?q=%s&appid=00e6056a80771fabd8617694dc22cf23", city);
-			HttpResponse<JsonNode> response = Unirest
-					.get(url)
-					.asJson();
+        for (String city : cities) {
+            String url = String.format("http://api.openweathermap.org/data/2.5/weather?q=%s&appid=00e6056a80771fabd8617694dc22cf23", city);
+            HttpResponse<JsonNode> response = Unirest
+                    .get(url)
+                    .asJson();
 
-			assertNotNull(response.getBody());
-			assertEquals((int) HttpStatus.SC_OK, response.getStatus());
-		}
+            assertNotNull(response.getBody());
+            assertEquals((int) HttpStatus.SC_OK, response.getStatus());
+        }
 
-	}
+    }
 
+    @Test
+    public void herokuData() throws UnirestException {
+        List<String> cities = new ArrayList<>();
+        cities.add("London");
+        cities.add("Berlin");
+
+        for (String city : cities) {
+            String url = String.format("https://varon-arsw-t2.herokuapp.com/weather/" + city);
+            HttpResponse<JsonNode> response = Unirest
+                    .get(url)
+                    .asJson();
+
+            assertNotNull(response.getBody());
+            assertEquals((int) HttpStatus.SC_OK, response.getStatus());
+        }
+
+    }
 }
