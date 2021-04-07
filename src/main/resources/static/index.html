@@ -2,9 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Weather App</title>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="/webjars/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="map.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="/webjars/bootstrap/4.1.2/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="styles.css"/>
+
 </head>
 <body>
+<div class="container">
+    <div class="row">
+        <h1 class="text-center">Weather App</h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <div class="input-group mb-3">
+                <input id="ciudad" type="text" class="form-control" placeholder="City" aria-label="City"
+                       aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button onclick="app.buscar(ciudad.value)" class="btn btn-outline-secondary" type="button">Search
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
 
+    <div class="row">
+        <h3>Weather</h3>
+        <div class="col-sm-6">
+            <table class="table">
+                <tr>
+                    <th scope="col">Type</th>
+                    <th scope="col">Description</th>
+                </tr>
+                <tbody id="weather"></tbody>
+            </table>
+        </div>
+        <div class="col-sm-6">
+            <h3 class="text-center" id="temp">Temperature: 0</h3>
+            <h3 class="text-center" id="feels_like">Feels like: 0</h3>
+            <h3 class="text-center" id="temp_min">Low: 0</h3>
+            <h3 class="text-center" id="temp_max">High: 0</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div id="map"></div>
+    </div>
+
+</div>
 </body>
 </html>
