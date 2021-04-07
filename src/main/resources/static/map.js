@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    if (document.querySelectorAll('#map').length > 0)
-    {
+    if (document.querySelectorAll('#map').length > 0) {
         if (document.querySelector('html').lang)
             lang = document.querySelector('html').lang;
         else
@@ -15,39 +14,38 @@ document.addEventListener('DOMContentLoaded', function () {
 
 var map;
 
-function initMap()
-{
+function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: -34.397, lng: 150.644},
         zoom: 8
     });
 
     fetch('https://raw.githubusercontent.com/jayshields/google-maps-api-template/master/markers.json')
-        .then(function(response){return response.json()})
+        .then(function (response) {
+            return response.json()
+        })
         .then(plotMarkers);
 }
 
 var markers;
 var bounds;
 
-function plotMarkers(m)
-{
+function plotMarkers(m) {
     markers = [];
     bounds = new google.maps.LatLngBounds();
 
-    m.forEach(function (marker) {
-        var position = new google.maps.LatLng(marker.coord.lat, marker.coord.lon);
 
-        markers.push(
-            new google.maps.Marker({
-                position: position,
-                map: map,
-                animation: google.maps.Animation.DROP
-            })
-        );
+    var position = new google.maps.LatLng(m.coord.lat, m.coord.lon);
 
-        bounds.extend(position);
-    });
+    markers.push(
+        new google.maps.Marker({
+            position: position,
+            map: map,
+            animation: google.maps.Animation.DROP
+        })
+    );
+
+    bounds.extend(position);
 
     map.fitBounds(bounds);
 }
