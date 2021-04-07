@@ -11,8 +11,8 @@ var app = (function () {
     var generarClima = (function (clima) {
         $('#weather').empty();
         var tables;
-        for (let i = 0; i < clima.weather.length; i++) {
-            tables += "<tr> <td>" + clima.weather[i].main + "</td> <td>" + clima.weather[i].description + "</td> </tr>";
+        for (var clave in clima.weather) {
+            tables += "<tr> <td>" + clave.main + "</td> <td>" + clave.description + "</td> </tr>";
         }
         $('#weather').append(tables)
 
