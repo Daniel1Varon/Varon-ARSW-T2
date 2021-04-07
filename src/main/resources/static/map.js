@@ -19,18 +19,13 @@ function initMap() {
         center: {lat: -34.397, lng: 150.644},
         zoom: 8
     });
-
-    fetch('https://raw.githubusercontent.com/jayshields/google-maps-api-template/master/markers.json')
-        .then(function (response) {
-            return response.json()
-        })
-        .then(plotMarkers);
 }
 
 var markers;
 var bounds;
 
 function plotMarkers(m) {
+    initMap();
     markers = [];
     bounds = new google.maps.LatLngBounds();
 
