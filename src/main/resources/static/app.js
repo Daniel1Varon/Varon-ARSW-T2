@@ -1,10 +1,8 @@
 var app = (function () {
     var buscar = function (ciudad) {
 
-        axios({
-            method: 'GET',
-            url: '/weather/' + ciudad,
-
+        axios.get('https://varon-arsw-t2.herokuapp.com/weather/'+ciudad,{
+            responseType: 'json'
         })
             .then(response => generarClima(response.data))
             .catch(error => console.log(error));
