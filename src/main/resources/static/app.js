@@ -24,7 +24,7 @@ var app = (function () {
         temp_min.innerHTML = "Low: " + clima.main.temp_min;
         let temp_max = document.querySelector('#temp_max');
         temp_max.innerHTML = "High: " + clima.main.temp_max;
-        markers(clima);
+        plotMarkers(clima);
 
     })
 
