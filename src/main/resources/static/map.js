@@ -4,7 +4,7 @@ var bounds;
 function initMap(){
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 4.782991299132583, lng: -74.04263763693044},
-        zoom: 8
+        zoom: 7
     });
 }
 
