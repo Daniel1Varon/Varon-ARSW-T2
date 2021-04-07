@@ -12,7 +12,7 @@ var app = (function () {
         $('#weather').empty();
         var tables;
         for (let i = 0; i < clima.weather.length; i++) {
-            console.log(weather[i].main);
+            console.log(clima.weather[i].main);
             tables += "<tr> <td>" + clima.weather[i].main + "</td> <td>" + clima.weather[i].description + "</td> </tr>";
         }
         $('#weather').append(tables);
